@@ -1,6 +1,9 @@
 FROM kalilinux/kali-rolling
+
+# Maintainer Info
 LABEL maintainer="ihsanpmh@gmail.com"
 
+# Installing updates, dependencies, ssh configurations and adding user 
 RUN apt-get update \
     && apt-get install -y openssh-server \
     && mkdir /var/run/sshd \
@@ -13,4 +16,5 @@ RUN apt-get update \
 
 EXPOSE 22
 
+# Starting ssh service
 CMD ["/usr/sbin/sshd", "-D"]

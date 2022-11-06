@@ -1,6 +1,7 @@
 FROM	 archlinux:latest
 
-MAINTAINER 	ihsanpmh@gmail.com
+# Maintainer Info
+LABEL maintainer="ihsanpmh@gmail.com"
 
 # Update the repositories
 RUN	 pacman -Syy
@@ -15,7 +16,7 @@ RUN  /usr/bin/ssh-keygen -A
 # RUN	 echo 'root:roottoor' | chpasswd
 
 # Adding additional user
-RUN useradd -m pmihsan -p $(openssl passwd pm@05)
+RUN useradd -m pmihsan -p $(openssl passwd 1234)
 
 # Adding user to sudo group
 RUN usermod -aG wheel pmihsan
