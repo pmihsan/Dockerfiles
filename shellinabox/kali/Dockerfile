@@ -5,7 +5,7 @@ LABEL maintainer="ihsanpmh@gmail.com"
 
 # Installing updates, dependencies, ssh configurations and adding user 
 RUN apt-get update \
-    && apt-get install -y openssh-server openssl shellinabox nano curl
+    && apt-get install -y openssh-server openssl shellinabox nano curl sudo
 
 RUN mkdir /var/run/sshd \
     && sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config \

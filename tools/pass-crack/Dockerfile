@@ -3,7 +3,6 @@ FROM kalilinux/kali-rolling
 # Maintainer Info
 LABEL maintainer="ihsanpmh@gmail.com"
 
-
 # Installing updates, dependencies, ssh configurations and adding user 
 RUN  apt update \
     && apt install -y ssh john gobuster  

@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-LABEl maintainer="ihsanpmh@gmail.com"
+LABEL maintainer="ihsanpmh@gmail.com"
 
 # Updates and Dependencies
 RUN apt update && apt install -y openssh-server git python3 pip 
